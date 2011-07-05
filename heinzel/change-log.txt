@@ -1,0 +1,18 @@
+Merge info:
+Branched off from version /heinzel/branches/rewrite__cache2/
+
+Title:
+Make heinzel usable in a threaded environment.
+
+Rationale:
+A sqlite connection can only be used in one thread. If used in a different 
+thread than the one it was created in, sqlite raises an exception.
+
+Measures:
+1. Use multiprocessing instead. 
+
+2. To enable consistent values of model instance fields across processes, a 
+new *InstanceInfo._meta* keyword *force-sync* was introduced, which governs 
+the process of updating a model instance's field values on every database hit 
+that has the model instance as a result.
+

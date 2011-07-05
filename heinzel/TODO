@@ -1,0 +1,20 @@
+====
+Todo
+====
+
+#. recursive relations
+#. annotations
+#. chained lookups for order-by part (currently ordering only works for 
+								fields of the original model of a query)
+#. transaction management
+#. optimize signals (currently runs over EVERY instance)
+#. avoid max. variable limit in IN filter (use executemany?)
+
+
+====
+Done
+====
+
+#. signals
+#. relationmanager descriptor
+#. find a cool name (heinzel ???, babik ???)
