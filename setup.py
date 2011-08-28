@@ -7,8 +7,8 @@ except ImportError:
 	from distutils.core import setup
 
 
-VERSION = re.search('version = "([^"]+)"',
-					open("heinzel/__init__.py").read()).group(1)
+## VERSION = re.search('version = "([^"]+)"',
+## 					open("heinzel/__init__.py").read()).group(1)
 
 
 def find_packages():

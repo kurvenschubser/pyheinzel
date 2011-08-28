@@ -52,10 +52,10 @@ class Relation(object):
 			self._reverse_manager = OneToOneManager(self)
 
 	def __str__(self):
-		return self.__unicode__()
+		return unicode(self)
 
 	def __unicode__(self):
-		return ("<Relation instance at %i. model=%s, related_model=%s, "
+		return ("<Relation instance at 0x%x. model=%s, related_model=%s, "
 				"identifier=%s, reverse_identifier='%s', mode=%s>"
 					%(id(self), self.model, self.related_model,
 						self.identifier, self.reverse_identifier, self.mode)

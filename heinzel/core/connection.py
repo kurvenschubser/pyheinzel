@@ -23,7 +23,7 @@ class Table(object):
 		self.columns = columns
 
 	def __str__(self):
-		return ("<Table object at %i: name=%s, columns=%s>" 
+		return ("<Table object at %x: name=%s, columns=%s>" 
 				% (id(self), self.name, self.columns))
 
 	def __iter__(self):
@@ -48,7 +48,7 @@ class Database(object):
 		
 
 	def __repr__(self):
-		return "<%s instance at %i: dbname=%s>" % (self.__class__.__name__,
+		return "<%s instance at %x: dbname=%s>" % (self.__class__.__name__,
 													id(self), self.dbname)
 
 	def connect(self, dbname=None, commit=True):

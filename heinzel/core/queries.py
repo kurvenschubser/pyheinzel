@@ -285,7 +285,7 @@ class BaseQuerySet(object):
 		return unicode(self).encode(settings.DEFAULT_ENCODING)
 	
 	def __unicode__(self):
-		return unicode(list([str(o) for o in self.eval()]))
+		return unicode(map(str, self.eval()))
 
 	def __repr__(self):
 		return str(map(str, self.eval()))

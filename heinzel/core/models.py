@@ -173,8 +173,8 @@ class Model(object):
 		return repr(self)
 
 	def __unicode__(self):
-		return u"<%s instance at 0x%s>" %(self.__class__.__name__, 
-											int(str(id(self)), 16))
+		return u"<%s instance at 0x%x>" %(self.__class__.__name__, 
+											id(self))
 
 
 	def __eq__(self, other):

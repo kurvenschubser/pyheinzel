@@ -221,7 +221,7 @@ class Node(object):
 		self.negate = negate
 
 	def __str__(self):
-		return self.__unicode__()
+		return unicode(self)
 
 	def __unicode__(self):
 		return (u"<%s conn=%s, negate=%s:[%s]>" %(
@@ -322,7 +322,7 @@ def quicksort(iterable):
 	pivot = iterable.pop()
 	left  = [element for element in iterable if element <  pivot]
 	right = [element for element in iterable if element >= pivot]
-	return quicksort(left) + [pivotelement] + quicksort(right)
+	return quicksort(left) + [pivot] + quicksort(right)
 
 
 def zipcmp(iter1, iter2, func=lambda tup: tup[0] is tup[1]):
