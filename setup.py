@@ -34,3 +34,4 @@ setup(
 	},
 	install_requires=["pytz"]
 )
+
