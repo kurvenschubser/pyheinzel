@@ -23,7 +23,7 @@ def find_packages():
 
 setup(
 	name="heinzel",
-	version=VERSION,
+	## version=VERSION,
 	description=("Object relational mapper (ORM), influenced by "
 					"Django's and the Storm ORM."),
 	author="Malte Engelhardt",
